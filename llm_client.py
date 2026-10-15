@@ -60,7 +60,7 @@ def _gemini(prompt, system, json_mode, timeout):
         response_mime_type="application/json" if json_mode else None,
     )
     response = client.models.generate_content(
-        model=os.getenv("GEMINI_MODEL", "gemini-flash-latest"),
+        model=os.getenv("GEMINI_MODEL", "gemini-flash-lite-latest"),
         contents=prompt,
         config=config,
     )
